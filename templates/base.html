@@ -1,4 +1,7 @@
 {% url 'event_home' as event_home %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_logout' as logout_url %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -6,6 +9,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+
 
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,7 +37,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'event_home' %}">The Miners Lantern</a>
+            <a class="navbar-brand" href="{% url 'event_home' %}"><img src="{% static 'event/img/the-miners-lantern-logo.png' %}" alt="The Miners Lantern Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,11 +46,37 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href=""></a>
+                            href="">Home</a>
                     </li>
-                <span class="navbar-text text-muted">
-                    The Miners Lantern
-                </span>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page"
+                            href="">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page"
+                            href="">About</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="{% url 'new_property' %}" class="nav-link {% if request.path == new_property_url %}active{% endif %}" aria-current="page">Add Property</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="logout-form" method="post" action="{% url 'account_logout' %}" style="display: inline-block;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link nav-link" style="display: inline-block; padding: 8px;">Logout</button>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'account_signup' %}" class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'account_login' %}" class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                
+       
             </div>
         </div>
     </nav>
