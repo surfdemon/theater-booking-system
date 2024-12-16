@@ -19,4 +19,5 @@ from . import views
 
 urlpatterns = [
     path('', views.EventHome.as_view(), name='event_home'),
+    path('events/', views.EventList.as_view(), name="events"),
 ]
