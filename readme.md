@@ -154,6 +154,9 @@ Form to add new event
 
 # Agile
 Throughout the project we followed the agile methodoloy. We set up a project board for assignment of taks between team members and prioritised creating the  minimum viable product
+![agile board](https://github.com/user-attachments/assets/7c7a0f9f-9e8c-4a46-8da9-bfd9fbe055a0)
 
+As well as the project board we also spent time ensuring our entity relationship diagram was well thought out and would lead to the creation of a database that would enable us to fufill our user story requirements.
+![Entity realtionship diagram](https://github.com/user-attachments/assets/72adc638-c6f7-4c4e-bd03-dc8bae254857)
 
 # Design
