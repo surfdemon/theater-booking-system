@@ -6,8 +6,9 @@
 
     {% for event in events %}
     <div>
-        <h2>{{ event.name }}</h2>
+        <h2><a href={% url 'book_event' event.id%}>{{ event.name }}</a></h2>
         <p>Tickets left: {{ event.tickets_left }}</p>
+
     </div>
 {% endfor %}
 {% endblock %}

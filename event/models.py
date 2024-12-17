@@ -10,7 +10,7 @@ class Event(models.Model):
     datetime = models.DateTimeField()
     available_tickets = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = CloudinaryField('image')
+    image = CloudinaryField('image', blank=True, null=True, default=None)
 
     def tickets_left(self):
         booked_tickets = BookingTable.objects.filter(event=self).count()
