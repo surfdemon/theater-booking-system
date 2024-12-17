@@ -1,7 +1,10 @@
-:root { 
-    --grey: 162, 160, 154;
-    --white: 255, 254, 254;
-    --green: 14, 78, 25;
+:root {
+    --grey: #a2a09a;
+    --grey-rgba: 162, 160, 154;
+    --white: #fffefe;
+    --white-rgba: 255, 254, 254;
+    --green: #0e4e19;
+    --green-rgba: 14, 78, 25;
 }
 
 /* .roboto-light {
