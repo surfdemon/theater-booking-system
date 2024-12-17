@@ -37,3 +37,9 @@ class BookEvent(LoginRequiredMixin, View):
                 )
         booking.save()
         return render(request, 'event/booking_success.html')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        for event in context['events']:
+            event.tickets_left = event.tickets_left()
+        return context
