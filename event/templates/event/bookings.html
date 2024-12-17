@@ -12,6 +12,11 @@
                     Event: {{ booking.event.name }}<br>
                     Date: {{ booking.event.datetime }}<br>
                     Tickets: {{ booking.numberOfTickets }}
+                    <a href="{% url 'update_booking' booking.id %}">Update Booking</a>
+                    <form method="post" action="{% url 'delete_booking' booking.id %}" onsubmit="return confirm('Are you sure you want to delete this booking?');">
+                        {% csrf_token %}
+                        <button type="submit">Delete Booking</button>
+                    </form>
                 </li>
             {% endfor %}
         </ul>

@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.urls import path
 from . import views
-from .views import user_bookings
+from .views import user_bookings, UpdateBooking, DeleteBooking
+
 
 urlpatterns = [
     path('', views.EventHome.as_view(), name='event_home'),
     path('events/', views.EventList.as_view(), name="events"),
     path('bookings/', user_bookings.as_view(), name='user_bookings'),
+    path('bookings/update/<int:booking_id>/', UpdateBooking.as_view(), name='update_booking'),
+    path('bookings/delete/<int:booking_id>/', DeleteBooking.as_view(), name='delete_booking'),
 ]
