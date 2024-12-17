@@ -1,50 +1,47 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 <section>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                {% for event in events %}
-                <div class="col-md-4">
-                    <div class="card-body">
-                        <a href="{% url 'book_event' event.id %}">
-                            <h2 class="card-title">{{ event.name }}</h2>
-                            <p class="card-text">When: {{ event.datetime }}</p>
-                            <hr />
-                            {% if "placeholder" in event.image.url %}
-                            <img
-                                src="{% static 'event/img/the-miners-lantern-logo.png' %}"
-                                alt="The Miners Lantern Logo"
-                            />
-                            {% else %}
-                            <img src="{{ event.image.url }}" alt-="{{ event.name }}" />
-                            {% endif %}
-                            <p>Available Tickets - {{ event.tickets_left }}</p>
-                            <p>£{{ event.price }}</p>
-                        </a>
+                <div class="row d-flex justify-content-evenly">
+                    {% for event in events %}
+                    <div class="col-md-4 p-4">
+                        <div class="card">
+                            <a href="{% url 'book_event' event.id %}">
+                              <div class="card-body">
+                                <h2 class="card-title">{{ event.name }}</h2>
+                                <p class="card-text">When: {{ event.datetime }}</p>
+                                <img 
+                                    class="card-img event-image"
+                                    src="{% if "placeholder" in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}"
+                                    alt="{{ event.name }}"
+                                />
+                                    <p>Available Tickets - {{ event.available_tickets }}</p>
+                                    <p>£{{ event.price }}</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row d-flex justify-content-evenly">
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
-
-                    {% if forloop.counter|divisibleby:3 %}
         </div>
-
-            <div class="row d-flex justify-content-evenly">{% endif %} {% endfor %}</div>
         {% if is_paginated %}
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
-                <li class="p-2">
-                    <a href="?page={{ page_obj.previous_page_number }} " class="btn-global page-link"> &laquo; PREV</a>
-                </li>
-                {% endif %} {% if page_obj.has_next %}
-                <li class="p-2">
-                    <a href="?page={{ page_obj.next_page_number }}" class="btn-global page-link"> NEXT &raquo;</a>
-                </li>
+                <li class="p-2"><a href="?page={{ page_obj.previous_page_number }}" class="btn-global page-link"> &laquo; PREV</a></li>
                 {% endif %}
+                <!-- Add more pagination controls here if needed -->
             </ul>
         </nav>
         {% endif %}
     </div>
 </section>
-
 {% endblock %}
