@@ -13,7 +13,7 @@ class Event(models.Model):
     image = CloudinaryField('image')
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class BookingTable(models.Model):
