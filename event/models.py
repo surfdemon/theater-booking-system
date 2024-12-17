@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from django.db.models import Sum
 
 # Create your models here.
 
@@ -13,7 +14,9 @@ class Event(models.Model):
     image = CloudinaryField('image', blank=True, null=True, default=None)
 
     def tickets_left(self):
-        booked_tickets = BookingTable.objects.filter(event=self).count()
+        #booked_tickets = BookingTable.objects.filter(event=self).aggregate(total=Sum('numberOfTickets'))['total']
+        bookings_for_event = BookingTable.objects.filter(event=self)
+        booked_tickets = bookings_for_event.aggregate(total=Sum('numberOfTickets'))['total']
         print(f'Booked Tickets: {booked_tickets}')
         return self.available_tickets - booked_tickets
 
