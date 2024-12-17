@@ -3,4 +3,11 @@
 {% block content %}
     <h1>Event Page</h1>
     <p>Welcome to the events </p>
+
+    {% for event in events %}
+    <div>
+        <h2>{{ event.name }}</h2>
+        <p>Tickets left: {{ event.tickets_left }}</p>
+    </div>
+{% endfor %}
 {% endblock %}
