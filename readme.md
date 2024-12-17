@@ -151,3 +151,9 @@ Contact form
 FAQ section
 Testimonials section
 Form to add new event
+
+# Agile
+Throughout the project we followed the agile methodoloy. We set up a project board for assignment of taks between team members and prioritised creating the  minimum viable product
+
+
+# Design
