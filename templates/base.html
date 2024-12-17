@@ -2,6 +2,8 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'user_bookings' as bookings %}
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -58,6 +60,9 @@
                             href="">About</a>
                     </li>
                     {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="{% url 'user_bookings' %}" class="nav-link {% if request.path == bookings %}active{% endif %}" aria-current="page">Bookings</a>
+                    </li>
                     <li class="nav-item">
                         <form id="logout-form" method="post" action="{% url 'account_logout' %}" style="display: inline-block;">
                             {% csrf_token %}
