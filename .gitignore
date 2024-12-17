@@ -11,3 +11,4 @@ cloudinary_python.txt
 venv/
 .env.py
 db.sqlite3
+env/

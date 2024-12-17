@@ -15,3 +15,9 @@ class EventList(generic.ListView):
     template_name = "event/events.html"
     context_object_name = "events"
     paginate = 6
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        for event in context['events']:
+            event.tickets_left = event.tickets_left()
+        return context
