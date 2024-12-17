@@ -18,6 +18,8 @@ class Event(models.Model):
         bookings_for_event = BookingTable.objects.filter(event=self)
         booked_tickets = bookings_for_event.aggregate(total=Sum('numberOfTickets'))['total']
         print(f'Booked Tickets: {booked_tickets}')
+        if booked_tickets is None:
+            booked_tickets = 0
         return self.available_tickets - booked_tickets
 
     def __str__(self):
