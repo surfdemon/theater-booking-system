@@ -11,7 +11,14 @@
     <form method="POST">
         {% csrf_token %}
         <label for="tickets">Number of tickets</label>
-        <input type="number" name="number_of_tickets" id="number_of_tickets" min="1" max="{{ event.tickets_left }}" onChange="calculateTotalPrice({{ event.price }})">
+        <input 
+            type="number" 
+            name="number_of_tickets" 
+            id="number_of_tickets" 
+            min="1" 
+            max="{{ event.tickets_left }}" 
+            onChange="calculateTotalPrice({{ event.price }})"
+        >
         <br>
         <button type="submit">Book Tickets</button>
     </form>
@@ -20,7 +27,6 @@
     <p>Total Price: £<span id="totalPrice">0</span></p>
 
 {% endblock %}
-
 
 {% block extras %}
     <script src="{% static 'event/js/event.js' %}"></script>
