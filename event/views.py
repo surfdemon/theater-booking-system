@@ -43,3 +43,9 @@ class BookEvent(LoginRequiredMixin, View):
         for event in context['events']:
             event.tickets_left = event.tickets_left()
         return context
+
+
+class user_bookings(LoginRequiredMixin, View):
+    def get(self, request):
+        user_bookings = BookingTable.objects.filter(user=request.user)
+        return render(request, 'event/bookings.html', {'user_bookings': user_bookings})

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Bookings</h1>
+    <p>Manage your bookings.</p>
+
+
+    {% if user_bookings %}
+        <ul>
+            {% for booking in user_bookings %}
+                <li>
+                    Event: {{ booking.event.name }}<br>
+                    Date: {{ booking.event.datetime }}<br>
+                    Tickets: {{ booking.numberOfTickets }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have no bookings.</p>
+    {% endif %}
+{% endblock %}
