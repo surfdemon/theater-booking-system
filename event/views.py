@@ -37,7 +37,11 @@ class BookEvent(LoginRequiredMixin, View):
                 numberOfTickets=number_of_tickets
                 )
         booking.save()
-        return render(request, 'event/booking_success.html')
+        context = { 
+                   'event': event.name,
+                   'number_of_tickets': number_of_tickets,
+        }
+        return render(request, 'event/booking-success.html', context)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

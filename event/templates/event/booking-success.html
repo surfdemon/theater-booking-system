@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <title>Book Event Successful</title>
+{% endblock %}
+
+{% block content %}
+    <h1> Event Booked</h1>
+    <p>You have booked {{ number_of_tickets }} for {{ event }}</p>
+{% endblock %}
+
+
+{% block extras %}
+    <script src="{% static 'event/js/event.js' %}"></script>
+{% endblock %}

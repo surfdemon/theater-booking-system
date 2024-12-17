@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <title>Book Event</title>
+{% endblock %}
+
+{% block content %}
+    <h1> Book Event Page</h1>
+    <p>Please make your booking for {{ event.name }}</p>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="tickets">Number of tickets</label>
+        <input type="number" name="number_of_tickets" id="number_of_tickets" min="1" max="{{ event.tickets_left }}" onChange="calculateTotalPrice({{ event.price }})">
+        <br>
+        <button type="submit">Book Tickets</button>
+    </form>
+
+    <p>The price is £{{ event.price }} per ticket</p>
+    <p>Total Price: £<span id="totalPrice">0</span></p>
+
+{% endblock %}
+
+
+{% block extras %}
+    <script src="{% static 'event/js/event.js' %}"></script>
+{% endblock %}
