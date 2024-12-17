@@ -25,6 +25,7 @@ cloudinary.config(
     cloud_name=os.environ.get('CLOUD_NAME'),
     api_key=os.environ.get('API_KEY'),
     api_secret=os.environ.get('API_SECRET'),
+    secure=True,
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,7 +42,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*', '.herokuapp.com']
- 
+
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost",
     "https://*.herokuapp.com"
