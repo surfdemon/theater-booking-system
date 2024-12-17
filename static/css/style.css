@@ -1,4 +1,11 @@
-
+:root {
+    --grey: #a2a09a;
+    --grey-rgba: 162, 160, 154;
+    --white: #fffefe;
+    --white-rgba: 255, 254, 254;
+    --green: #0e4e19;
+    --green-rgba: 14, 78, 25;
+}
 
 /* .roboto-light {
     font-family: "Roboto", sans-serif;
@@ -19,9 +26,41 @@
     font-style: normal; 
 }
 
+body {
+    background-color: var(--grey);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+
+nav { 
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+}
+
+#navbarText > ul > li > a { 
+    color: var(--white);
+}
+
+.navbar-light .navbar-toggler{ 
+    background-color: rgba(var(--white), 0.4);
+    border: 1px solid; 
+    color: var(--white);
+    border-radius: 50%;
+    height: 50px;
+    width: 55px;
+}
+
 h1 { 
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;    
+}
+
+#site-logo { 
+    width: 150px; 
+    height: 150px;
 }
