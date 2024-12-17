@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Event, BookingTable
+from .forms import UpdateBookingForm
 
 # Create your views here.
 
@@ -47,3 +48,30 @@ class BookEvent(LoginRequiredMixin, View):
         for event in context['events']:
             event.tickets_left = event.tickets_left()
         return context
+
+
+class user_bookings(LoginRequiredMixin, View):
+    def get(self, request):
+        user_bookings = BookingTable.objects.filter(user=request.user)
+        return render(request, 'event/bookings.html', {'user_bookings': user_bookings})
+
+class UpdateBooking(LoginRequiredMixin, View):
+    def get(self, request, booking_id):
+        booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
+        form = UpdateBookingForm(instance=booking)
+        return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
+
+    def post(self, request, booking_id):
+        booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
+        form = UpdateBookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('user_bookings')
+        return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
+
+
+class DeleteBooking(LoginRequiredMixin, View):
+    def post(self, request, booking_id):
+        booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
+        booking.delete()
+        return redirect('user_bookings')
