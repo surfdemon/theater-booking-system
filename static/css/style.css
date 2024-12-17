@@ -27,27 +27,27 @@
 }
 
 body {
-    background-color: rgba(var(--grey));
-    color: rgba(var(--white));
+    background-color: var(--grey);
+    color: var(--white);
     margin: 0;
     padding: 0;
 }
 
 nav { 
-    background-color: rgba(var(--grey));
-    color: rgba(var(--white));
+    background-color: var(--grey);
+    color: var(--white);
     padding: 10px;
     text-align: center;
 }
 
 #navbarText > ul > li > a { 
-    color: rgba(var(--white));
+    color: var(--white);
 }
 
 .navbar-light .navbar-toggler{ 
     background-color: rgba(var(--white), 0.4);
     border: 1px solid; 
-    color: rgba(var(--white));
+    color: var(--white);
     border-radius: 50%;
     height: 50px;
     width: 55px;
