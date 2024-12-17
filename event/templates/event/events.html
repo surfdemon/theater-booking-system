@@ -6,7 +6,7 @@
                 {% for event in events %}
                 <div class="col-md-4">
                     <div class="card-body">
-                        <a href="">
+                        <a href="{% url 'book_event' event.id %}">
                             <h2 class="card-title">{{ event.name }}</h2>
                             <p class="card-text">When: {{ event.datetime }}</p>
                             <hr />
