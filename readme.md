@@ -12,3 +12,142 @@ The live site is available  [here](https://miners-lantern-b436a12bd6f4.herokuapp
 The target audience for this is venues that need to manage event attendance as well as individuals who want to browse and book events.
 
 # User Stories
+
+## User Story: As a user, I want to make an account
+
+### Acceptance Criteria:
+
+User can access a registration form
+User must enter username
+User must enter password that meets security requirements
+User must confirm matching password
+User can log in with created credentials
+System validates duplicate emails/usernames
+Error messages display for invalid inputs
+
+## User Story: As a user, I want to make a booking
+
+### Acceptance Criteria:
+
+User must be logged in to make booking
+User can select number of guests
+System prevents booking if capacity exceeded
+User receives booking confirmation message
+Booking appears in user's booking list
+Event capacity updates after successful booking
+Total price calculated based on guests
+
+## User Story: As a user, I want to create events from the admin panel
+
+### Acceptance Criteria:
+
+Admin access required
+Form includes all required event fields
+Image upload functionality
+Published/unpublished option available
+Validation for required fields
+Confirmation on successful creation
+Event immediately visible in admin panel
+
+## User Story: As a user, I want to edit my bookings
+
+### Acceptance Criteria:
+
+User can edit only future bookings
+User can modify guest numbers within capacity
+System recalculates total price if guests changed
+User receives confirmation message of change
+Booking updates with new details
+
+## User Story: As a user, I want to cancel a booking
+
+### Acceptance Criteria:
+
+User can cancel only future bookings
+Cancellation requires confirmation
+Event capacity updates after cancellation
+Cancelled bookings removed form list
+
+## User Story: As a user, I want to view my bookings
+
+### Acceptance Criteria:
+
+Bookings display event name, date, time
+Bookings show number of guests and total price
+Bookings sorted by date (upcoming first)
+Booking status clearly displayed
+
+## User Story: As an Admin, I want to edit upcoming events
+
+### Acceptance Criteria:
+
+Admin can edit only future events
+All event fields editable
+Changes don't affect existing bookings
+Edit history maintained
+Validation prevents invalid changes
+
+## User Story: As a user, I want to see available events
+
+### Acceptance Criteria:
+
+Events page shows all upcoming events
+Each event displays title, date, time, price
+Available capacity shown for each event
+Past events not displayed
+Events sorted by date
+Event details page accessible for each event
+
+## User Story: As a user, I want to view the home page to understand what the venue offers
+
+### Acceptance Criteria:
+
+Hero section with venue image
+Clear venue name and tagline
+Featured/upcoming events section
+Brief venue description
+Quick links to booking system
+Call-to-action for bookings
+Navigation to other key pages
+Social media links
+Location preview/map
+Responsive image gallery
+Latest news/updates section
+
+## User Story: As a user, I want the website to be responsive across all devices
+
+### Acceptance Criteria:
+
+Website adapts to mobile devices (320px and up)
+Website adapts to tablets (768px and up)
+Website adapts to desktop screens (1024px and up)
+Navigation menu collapses to hamburger on mobile
+Images scale appropriately across devices
+Text remains readable at all screen sizes
+
+## User Story: As a user, I want the website to be accessible
+
+### Acceptance Criteria:
+
+ARIA labels implemented where needed
+Proper heading hierarchy (h1-h6)
+Sufficient color contrast ratios
+Alt text for all images
+
+## User Story: As a user, I want to view the about page to learn more about the venue's history, offerings and submit a new event
+
+### Acceptance Criteria:
+
+Detailed venue history
+Mission/vision statement
+Venue facilities list
+Team/staff introduction section
+High-quality venue photos
+Types of events hosted
+Venue capacity information
+Parking/transport information
+Accessibility information
+Contact form
+FAQ section
+Testimonials section
+Form to add new event
