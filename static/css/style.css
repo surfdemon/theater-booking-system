@@ -64,3 +64,12 @@ h1 {
     width: 150px; 
     height: 150px;
 }
+
+/* Events */
+
+.event-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
