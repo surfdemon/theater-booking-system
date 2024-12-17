@@ -18,7 +18,7 @@
                                     src="{% if "placeholder" in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}"
                                     alt="{{ event.name }}"
                                 />
-                                    <p>Available Tickets - {{ event.available_tickets }}</p>
+                                    <p>Available Tickets - {{ event.tickets_left }}</p>
                                     <p>£{{ event.price }}</p>
                                 </div>
                             </a>
