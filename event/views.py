@@ -71,7 +71,7 @@ class UpdateBooking(LoginRequiredMixin, View):
         if form.is_valid():
             tickets_left = booking.event.tickets_left()
             if form.cleaned_data['numberOfTickets'] > tickets_left:
-                form.add_error("numberOfTickets", "Not enough tickets left for this event")
+                form.add_error("numberOfTickets", f"Not enough tickets left for this event.\n Only {tickets_left} tickets left.")
                 return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
             form.save()
             return redirect('user_bookings')
