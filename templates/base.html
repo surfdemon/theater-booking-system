@@ -3,6 +3,7 @@
 {% url 'account_login' as login_url %}
 {% url 'account_logout' as logout_url %}
 {% url 'user_bookings' as bookings %}
+{% url 'about_page' as about %}
 
 {% load static %}
 
@@ -56,8 +57,8 @@
                             href="{% url 'events' %}">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page"
-                            href="">About</a>
+                        <a class="nav-link {% if request.path == about %}active{% endif %}" aria-current="page"
+                            href="{% url 'about_page' %}" >About</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
