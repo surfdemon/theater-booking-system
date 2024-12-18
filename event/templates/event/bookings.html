@@ -6,19 +6,31 @@
 
 
     {% if user_bookings %}
+
         <ul>
+            <div class="row d-flex justify-content-evenly">
             {% for booking in user_bookings %}
-                <li>
-                    Event: {{ booking.event.name }}<br>
-                    Date: {{ booking.event.datetime }}<br>
-                    Tickets: {{ booking.numberOfTickets }}
-                    <a href="{% url 'update_booking' booking.id %}">Update Booking</a>
-                    <form method="post" action="{% url 'delete_booking' booking.id %}" onsubmit="return confirm('Are you sure you want to delete this booking?');">
-                        {% csrf_token %}
-                        <button type="submit">Delete Booking</button>
-                    </form>
+            <div class="col-md-4 p-4">
+                <li class="card ">
+                    <div class="card-body">
+                        <H2 class="card-title text-secondary">Event: {{ booking.event.name }}</H2><br>
+                        <p class="card-text text-secondary">Date: {{ booking.event.datetime }}</p><br>
+                        <img 
+                            class="card-img event-image"
+                            src="{{booking.event.image.url}}"
+                            alt="{{ event.name }}"
+                        />
+                        <p class="card-text text-secondary">Tickets: {{ booking.numberOfTickets }}</p>
+                        <a href="{% url 'update_booking' booking.id %}">Update Booking</a>
+                        <form method="post" action="{% url 'delete_booking' booking.id %}" onsubmit="return confirm('Are you sure you want to delete this booking?');">
+                            {% csrf_token %}
+                            <button type="submit">Delete Booking</button>
+                        </form>
+                    </div>
                 </li>
+            </div>
             {% endfor %}
+        </div>
         </ul>
     {% else %}
         <p>You have no bookings.</p>
