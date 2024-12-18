@@ -171,10 +171,13 @@ Balsamiq was used to create wireframes to determine the basic layout of the app.
 Accessibility was consdidered throuhgout the design process influencing descisions on fonts and colour schemes. Fonts were chosen with readability as a priority. 
 ### Font
 The font chosen was roboto due to its modern look and its readability.
-//repalce with image of font
+![font](https://github.com/user-attachments/assets/9d980fa7-14b4-4060-b98a-e9b6bcf67580)
+
 ### Colours
 We went with the following colour scheme as it provides good contrast to make text readable but also has a grey background colour as white backgrounds can look harsh on a white monitor. The green provides a nice accent colour.
-//insert image of colour scheme
+![colourscheme](https://github.com/user-attachments/assets/d84acb6b-9448-40de-bd3c-1354a37e8996)
+
 The accessibility of the colour scheme was also validated using an online checker provided by web aim: https://webaim.org/resources/contrastchecker/
 This validated that the contrast was good enough to ensure readability and that It was compliant with web content accessibility guidelines.
+![contrast checker](https://github.com/user-attachments/assets/063efa43-8eed-496a-ab6f-c61e68fa1384)
 
