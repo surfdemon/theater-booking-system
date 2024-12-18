@@ -161,7 +161,20 @@ As well as the project board we also spent time ensuring our entity relationship
 
 
 # Design
-Balsamiq was used to create wireframes to determine the layout of the app.
+## Wireframes.
+Balsamiq was used to create wireframes to determine the basic layout of the app.
 ![New Wireframe 1](https://github.com/user-attachments/assets/8c569a78-07bc-4ca8-bf24-64ef2c4cf881)
 ![New Wireframe 3](https://github.com/user-attachments/assets/3fdd68f1-a2da-49cd-8624-b258fc31f927)
 ![New Wireframe 2](https://github.com/user-attachments/assets/2610f37f-b631-4c6e-b344-ce7cafb6997e)
+
+## Accessibility.
+Accessibility was consdidered throuhgout the design process influencing descisions on fonts and colour schemes. Fonts were chosen with readability as a priority. 
+### Font
+The font chosen was roboto due to its modern look and its readability.
+//repalce with image of font
+### Colours
+We went with the following colour scheme as it provides good contrast to make text readable but also has a grey background colour as white backgrounds can look harsh on a white monitor. The green provides a nice accent colour.
+//insert image of colour scheme
+The accessibility of the colour scheme was also validated using an online checker provided by web aim: https://webaim.org/resources/contrastchecker/
+This validated that the contrast was good enough to ensure readability and that It was compliant with web content accessibility guidelines.
+
