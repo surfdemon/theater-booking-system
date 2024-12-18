@@ -16,7 +16,7 @@ class EventList(generic.ListView):
     model = Event
     template_name = "event/events.html"
     context_object_name = "events"
-    paginate_by = 4
+    paginate_by = 3
 
 
 class BookEvent(LoginRequiredMixin, View):
