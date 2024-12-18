@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Event, BookingTable
 from .forms import UpdateBookingForm
+from django.db.models import Sum
 
 # Create your views here.
 
@@ -16,7 +17,7 @@ class EventList(generic.ListView):
     model = Event
     template_name = "event/events.html"
     context_object_name = "events"
-    paginate_by = 4
+    paginate_by = 3
 
 
 class BookEvent(LoginRequiredMixin, View):
@@ -58,6 +59,9 @@ class user_bookings(LoginRequiredMixin, View):
 class UpdateBooking(LoginRequiredMixin, View):
     def get(self, request, booking_id):
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
+        
+        
+    
         form = UpdateBookingForm(instance=booking)
         return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
 
@@ -65,6 +69,10 @@ class UpdateBooking(LoginRequiredMixin, View):
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
         form = UpdateBookingForm(request.POST, instance=booking)
         if form.is_valid():
+            tickets_left = booking.event.tickets_left()
+            if form.cleaned_data['numberOfTickets'] > tickets_left:
+                form.add_error("numberOfTickets", f"Not enough tickets left for this event.\n Only {tickets_left} tickets left.")
+                return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
             form.save()
             return redirect('user_bookings')
         return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})

@@ -8,7 +8,11 @@
     <div class="parallax-inner">
 
         
-        <div class="home-subheading m-3"><mark> Welcome to <br>The Miner's Lantern </mark><br><br><mark class="hvr-sweep-to-left"><a class="signup-btn" href="{% url 'account_signup' %}">Sign up</a></mark></div>
+        <div class="home-subheading m-3"><mark> Welcome to <br>The Miner's Lantern </mark><br><br><mark class="hvr-sweep-to-left">
+            {% if not user.is_authenticated %}
+                <a class="signup-btn" href="{% url 'account_signup' %}">Sign up</a>
+            {% endif %}
+        </mark></div>
         
 
     </div>

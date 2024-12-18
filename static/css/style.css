@@ -76,7 +76,6 @@ footer {
     height: auto;
 }
 
-
 .fab {
     font-size: 2em;
 }
@@ -89,7 +88,6 @@ footer {
 .social-link:hover {
     color: var(--green);
 }
-
 /* home Page */
 
 .home-heading {
