@@ -81,6 +81,9 @@ footer {
     color: var(--white);
 }
 
+.social-link:hover {
+    color: var(--green);
+}
 /* home Page */
 
 .home-heading {
