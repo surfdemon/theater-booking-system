@@ -1,0 +1,79 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container-md about">
+            <img src="{%static 'img/miners-lantern.PNG'%}" class="img-thumbnail" alt="Image of The Miners Lantern">
+            <h1>Welcome to The Miners Lantern</h1>
+        </div>
+        <div class="about_info">
+            <p>The Miners Lantern stands as a living testament to Cornwall’s mining heritage, with its rustic charm 
+                        and timeworn character reflecting the stories of countless locals and miners who passed through its 
+                        doors. The wooden beams, stone walls, and vintage features all evoke memories of a bygone era, where 
+                        music, laughter, and camaraderie echoed through the pub’s rooms.
+                        Over the years, the pub has remained a central meeting place for Cornwall’s communities, offering 
+                        delicious local ales, hearty meals, and a cozy ambiance. However, as the times changed, so did the 
+                        vision for The Miners Lantern.
+                <br>
+                In recent years, The Miners Lantern has undergone a remarkable transformation. Embracing its historical
+                        roots while looking toward the future, it is now proudly a live music venue, showcasing a vibrant array 
+                        of talent from Cornwall and beyond. Whether you're a fan of folk, rock, acoustic, jazz, or local Cornish 
+                        bands, you'll find something to suit your taste at The Miners Lantern. Our venue is intimate yet full of 
+                        energy, with regular live performances that bring the building to life, offering a unique opportunity to 
+                        experience Cornwall's thriving music scene in a setting that has seen generations of stories unfold. From 
+                        up-and-coming artists to seasoned performers, the stage at The Miners Lantern has become a beloved spot 
+                        for music lovers.
+            </p>
+        </div>
+    </div>
+
+    <!-- form here -->
+    <div class="signup w-100 p-3 border">
+        <div class="container-fluid container-md">
+            <h5>If you wish to be the first to hear about our up coming events please sign up to our newsletter below.</h5>
+        </div>
+        <div class="container-md form">
+            <form method="POST">
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <br>
+                <button class="nl_button" type="submit">Sign me up</button>
+            </form>
+        </div>
+    </div>
+        <!-- more info here -->
+    <div class="mt-5 mb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="p-3 border h-100 text-center">
+                        <h1>Parking</h1>
+                        <p>
+                            Although The Miners Lantern does not have on-site parking, there are several local car parks within walking distance. We are pleased to offer reimbursement for parking fees with the purchase of any main meal (T&Cs apply; please ask a member of staff for more information).
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border h-100 text-center">
+                        <h1>Accessibility</h1>
+                        <p>
+                            Our pub, built in the 1800s, retains much of its historic charm. As a result, some areas may not be fully accessible to everyone. However, our staff are highly accommodating and happy to assist in any way possible. We kindly advise wheelchair users to contact us in advance of their visit so we can make arrangements to support you.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border h-100 text-center">
+                        <h1>Venue facilities</h1>
+                        <p>Our main stage area provides access to the main bar, with plenty of chairs and tables arranged for you to enjoy live music comfortably. For a more intimate experience, we also offer a cosy nook located behind the main bar. Featuring a warm, inviting fire, it’s the perfect spot to relax after a winter’s walk. We serve a limited menu of home-cooked meals, along with a small selection of locally produced cakes and snacks, ensuring there’s something delicious for everyone to enjoy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
