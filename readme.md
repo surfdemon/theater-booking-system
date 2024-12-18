@@ -181,3 +181,26 @@ The accessibility of the colour scheme was also validated using an online checke
 This validated that the contrast was good enough to ensure readability and that It was compliant with web content accessibility guidelines.
 ![contrast checker](https://github.com/user-attachments/assets/063efa43-8eed-496a-ab6f-c61e68fa1384)
 
+# Testing and validation
+
+# Deployment
+
+# Development Team
+
+- **Robert Beach**
+[GitHub](https://github.com/surfdemon)
+
+- **Zara Samm:**
+[GitHub](https://github.com/ZASamm)
+
+- **Becky Williams**
+[GitHub]()
+
+- **Richard Hallam:**
+[GitHub](https://github.com/Richard-Hallam)
+
+
+# Reflection on Development process.
+## Succsesses
+## Challenges
+## Final Thoughts
