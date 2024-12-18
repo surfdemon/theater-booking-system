@@ -194,7 +194,7 @@ This validated that the contrast was good enough to ensure readability and that 
 [GitHub](https://github.com/ZASamm)
 
 - **Becky Williams**
-[GitHub]()
+[GitHub](https://github.com/BeckyW-Design)
 
 - **Richard Hallam:**
 [GitHub](https://github.com/Richard-Hallam)
