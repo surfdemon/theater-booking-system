@@ -101,7 +101,45 @@
         <!-- Extras go here -->
     {% endblock extras %}
     <!-- Footer -->
-    <footer class="">
+    <footer class="footer">
+        <br>
+        <p class="m-4 text-center">
+            <a class="social-link" target="_blank" href="https://www.facebook.com/">
+                <i class="fab fa-brand fa-facebook-f mx-4"></i>
+                <!-- For screen readers  -->
+                <span class="sr-only">Facebook</span>
+            </a>
+            <a class="social-link" target="_blank" href="https://x.com/?lang=en">
+                <i class="fab fa-brands fa-x-twitter mx-4"></i>
+                <!-- For screen readers  -->
+                <span class="sr-only">Twitter</span>
+            </a>
+            <a class="social-link" target="_blank" href="https://x.com/?lang=en">
+                <i class="fab fa-brands fa-linkedin-in mx-4"></i>
+                <!-- For screen readers  -->
+                <span class="sr-only">LinkedIn</span>
+            </a>
+            <a class="social-link" target="_blank" href="https://www.instagram.com/">
+                <i class="fab fa-brands fa-instagram mx-4"></i>
+                <!-- For screen readers  -->
+                <span class="sr-only">Instagram</span>
+            </a>
+        </p>
+   
+        <p class="m-4 align-items-right">
+            {% block copyright %}
+            Copyright The Miner's Lantern 2024
+            {% endblock copyright %}
+        </p>
+        <h5 class="p-2">
+            Opening Times:
+        </h5>
+            <ul class="p-2">
+                <li>Monday - Thursday: 12:00 PM - 11:00 PM</li>
+                <li>Friday - Saturday: 12:00 PM - 1:00 AM</li>
+                <li>Sunday: 12:00 PM - 10:30 PM</li>
+            </ul>
+       
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
