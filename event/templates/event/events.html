@@ -15,10 +15,10 @@
                                 <p class="card-text">When: {{ event.datetime }}</p>
                                 <img 
                                     class="card-img event-image"
-                                    src="{% if "placeholder" in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}"
+                                    src="{% if 'placeholder' in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}"
                                     alt="{{ event.name }}"
                                 />
-                                    <p>Available Tickets - {{ event.available_tickets }}</p>
+                                    <p>Available Tickets - {{ event.tickets_left }}</p>
                                     <p>£{{ event.price }}</p>
                                 </div>
                             </a>
@@ -36,12 +36,17 @@
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
-                <li class="p-2"><a href="?page={{ page_obj.previous_page_number }}" class="btn-global page-link"> &laquo; PREV</a></li>
+                <li><a href="?page={{ page_obj.previous_page_number }} " class="page-link"> &laquo; PREV</a>
+                </li>
                 {% endif %}
-                <!-- Add more pagination controls here if needed -->
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                {% endif %}
             </ul>
         </nav>
         {% endif %}
     </div>
 </section>
+
+
 {% endblock %}
