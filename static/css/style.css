@@ -73,3 +73,75 @@ h1 {
     max-width: 100%;
     box-sizing: border-box;
 }
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about img {
+    height: auto;
+    width: 30vh;
+}
+
+.about h1 {
+    padding-left: 20px;
+}
+
+.about_info {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nl_button {
+    border:2px solid #0e4e19;
+    border-radius: 8px;
+    background-color: #0e4e19;
+    font-family: "Playfair Display", serif;
+    color: #fffefe;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.nl_button:hover {
+    border:2px solid #0e4e19;
+    border-radius: 8px;
+    background-color: #fffefe;
+    font-family: "Playfair Display", serif;
+    color: #0e4e19;
+}
+
+.p-3 {
+    color: #0e4e19;
+    background-color: #fffefe;
+}
+
+.signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    border: 5px #0e4e19;
+}
+
+.signup h5 {
+    font-family: "Playfair Display", serif;
+    color:#0e4e19
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal; 
+}
+
+.form {
+    padding-top: 20px;
+}
+
+.signup_button {
+    padding-top: 20px;
+}
