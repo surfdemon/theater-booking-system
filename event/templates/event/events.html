@@ -15,7 +15,7 @@
                                 <p class="card-text">When: {{ event.datetime }}</p>
                                 <img 
                                     class="card-img event-image"
-                                    src="{% if "placeholder" in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}"
+                                    src="{% if 'placeholder' in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}"
                                     alt="{{ event.name }}"
                                 />
                                     <p>Available Tickets - {{ event.tickets_left }}</p>
