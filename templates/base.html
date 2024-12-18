@@ -43,7 +43,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'event_home' %}"><img src="{% static 'event/img/the-miners-lantern-logo.png' %}" alt="The Miners Lantern Logo" id="site-logo"></a>
+                <a class="navbar-brand" href="{% url 'event_home' %}"><img src="{% static 'event/img/logo_final.png' %}" alt="The Miners Lantern Logo" id="site-logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -122,7 +122,7 @@
                 </a>
             </p>
             <div class="container-fluid">
-                <div class="row align-items-center">
+                <div class="row d-flex justify-content-between p-4">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <h5 class="m-4">
                             Opening Times:
@@ -133,7 +133,7 @@
                             <li>Sunday: 12:00 PM - 10:30 PM</li>
                         </ul>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-sm-12 col-md-6 col-lg-6 align-self-center text-center">
                         <p class="m-4">
                             {% block copyright %}
                                 Copyright The Miner's Lantern 2024
