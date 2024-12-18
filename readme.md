@@ -184,7 +184,11 @@ This validated that the contrast was good enough to ensure readability and that 
 # Testing and validation
 
 # Deployment
+The application was deployed to Heroku using Gunicorn. A Procfile was created containing the instructions to run the server. A file called requirements.txt  was also used to install all the dependancies needed to run the app. An external database was used instead of the built in heroku one.
 
+ 
+
+The live site is available [here](https://miners-lantern-b436a12bd6f4.herokuapp.com/).
 # Development Team
 
 - **Robert Beach**
