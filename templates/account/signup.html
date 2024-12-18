@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% load allauth i18n %}
+{% load static %}
 {% block head_title %}
     {% trans "Signup" %}
 {% endblock head_title %}
 {% block content %}
+    <div class="authContainer">
     {% element h1 %}
         {% trans "Sign Up" %}
     {% endelement %}
@@ -42,4 +44,10 @@
     {% if SOCIALACCOUNT_ENABLED %}
         {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
     {% endif %}
-{% endblock content %}
+</div>
+    {% endblock content %}
+
+    {% block extras %}
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+    <script src="{% static 'js/signup.js' %}"></script>
+{% endblock %}
