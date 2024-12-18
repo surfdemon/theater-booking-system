@@ -1,0 +1,35 @@
+.card { 
+    background-color: var(--light);
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0;
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+}
+a:has(.card-body){
+    color: var(--green);
+    text-decoration: none;
+    text-align: center;
+}
+.card-body { 
+    background: radial-gradient(
+        circle, 
+        rgba(var(--white-rgba), 1) 0%, 
+        rgba(var(--white-rgba), 0.8) 50%, 
+        rgba(var(--white-rgba), 0) 95%, 
+        rgba(var(--white-rgba), 0) 100%
+    );
+}
+.card-text{
+    color: var(--green);
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: normal;   
+}
