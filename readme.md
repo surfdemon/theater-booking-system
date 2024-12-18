@@ -159,4 +159,9 @@ Throughout the project we followed the agile methodoloy. We set up a project boa
 As well as the project board we also spent time ensuring our entity relationship diagram was well thought out and would lead to the creation of a database that would enable us to fufill our user story requirements.
 ![Entity realtionship diagram](https://github.com/user-attachments/assets/72adc638-c6f7-4c4e-bd03-dc8bae254857)
 
+
 # Design
+Balsamiq was used to create wireframes to determine the layout of the app.
+![New Wireframe 1](https://github.com/user-attachments/assets/8c569a78-07bc-4ca8-bf24-64ef2c4cf881)
+![New Wireframe 3](https://github.com/user-attachments/assets/3fdd68f1-a2da-49cd-8624-b258fc31f927)
+![New Wireframe 2](https://github.com/user-attachments/assets/2610f37f-b631-4c6e-b344-ce7cafb6997e)
