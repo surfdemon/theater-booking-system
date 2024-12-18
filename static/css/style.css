@@ -65,6 +65,91 @@ h1 {
     height: 150px;
 }
 
+footer {
+    color: var(--white);
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+
+.fab {
+    font-size: 2em;
+}
+
+.social-link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+/* home Page */
+
+.home-heading {
+	text-align: center;
+	font-size: 575%;
+	color: var(--white);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin: 15% 0;
+}
+.home-subheading {
+	text-align: right;
+	font-size: 275%;
+	color: var(--white);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.home-subheading-two {
+	text-align: left;
+	font-size: 275%;
+	color: var(--white);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.home-subheading-three {
+	text-align: right;
+	font-size: 275%;
+	color: var(--white);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+/* Start Parallax */
+
+.parallax {
+    background: url("../img/hero-image.jpg") no-repeat fixed left 50%;
+    text-align: right;
+}
+
+.parallax-inner {
+    padding-top: 10%;
+	padding-bottom: 15%;
+}
+
+.parallax-two {
+    background: url("../img/home-two.jpg") no-repeat fixed right 60%;
+    text-align: left;
+}
+
+.parallax-inner-two {
+    padding-top: 15%;
+	padding-bottom: 15%;
+}
+
+.parallax-three {
+    background: url("../img/home-three.jpg") no-repeat fixed left 60%;
+    text-align: left;
+}
+
+.parallax-inner-three {
+    padding-top: 15%;
+	padding-bottom: 15%;
+}
+
+
+/* End Parallex */
+
 /* Events */
 
 .event-image {
