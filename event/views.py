@@ -9,7 +9,13 @@ from django.db.models import Sum
 
 
 class EventHome(View):
+    """
+    View to display the home page with events.
+    """
     def get(self, request):
+        """
+        Handle GET requests and render the home page with events.
+        """
         events = Event.objects.all()
         context = {
             'events': events
@@ -18,6 +24,9 @@ class EventHome(View):
 
 
 class EventList(generic.ListView):
+    """
+    Generic class-based view to list all events with pagination.
+    """
     model = Event
     template_name = "event/events.html"
     context_object_name = "events"
@@ -25,7 +34,13 @@ class EventList(generic.ListView):
 
 
 class BookEvent(LoginRequiredMixin, View):
+    """
+    View to handle booking an event.
+    """
     def get(self, request, event_id):
+        """
+        Handle GET requests and render the booking page for a specific event.
+        """
         event = Event.objects.get(pk=event_id)
         context = {
             'event': event
@@ -33,6 +48,9 @@ class BookEvent(LoginRequiredMixin, View):
         return render(request, 'event/book-event.html', context)
 
     def post(self, request, event_id):
+        """
+        Handle POST requests to create a booking for a specific event.
+        """
         event = Event.objects.get(pk=event_id)
         user = request.user
         number_of_tickets = request.POST['number_of_tickets']
@@ -56,19 +74,31 @@ class BookEvent(LoginRequiredMixin, View):
 
 
 class user_bookings(LoginRequiredMixin, View):
+    """
+    View to display the user's bookings.
+    """
     def get(self, request):
         user_bookings = BookingTable.objects.filter(user=request.user)
         return render(request, 'event/bookings.html', {'user_bookings': user_bookings})
 
 
 class UpdateBooking(LoginRequiredMixin, View):
+    """
+    View to handle updating a booking.
+    """
     def get(self, request, booking_id):
+        """
+        Handle GET requests and render the update booking page for a specific booking.
+        """
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
 
         form = UpdateBookingForm(instance=booking)
         return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
 
     def post(self, request, booking_id):
+        """
+        Handle POST requests to update a booking for a specific event.
+        """
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
         form = UpdateBookingForm(request.POST, instance=booking)
         if form.is_valid():
@@ -82,8 +112,13 @@ class UpdateBooking(LoginRequiredMixin, View):
 
 
 class DeleteBooking(LoginRequiredMixin, View):
+    """
+    View to handle deleting a booking.
+    """
     def post(self, request, booking_id):
+        """
+        Handle POST requests to delete a booking for a specific event.
+        """
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
         booking.delete()
         return redirect('user_bookings')
-        

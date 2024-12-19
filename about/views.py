@@ -9,10 +9,19 @@ from .models import Signup
 
 
 class About(View):
+    """
+    View to handle the About page.
+    """
     def get(self, request):
+        """
+        Handle GET requests and render the About page.
+        """
         return render(request, 'about/about.html')
 
     def post(self, request):
+        """
+        Handle POST requests to sign up a user.
+        """
         email = request.POST['email']
         name = request.POST['fname']
    
