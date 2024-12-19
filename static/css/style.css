@@ -45,7 +45,7 @@ nav {
 }
 
 .navbar-light .navbar-toggler{ 
-    background-color: rgba(var(--white), 0.4);
+    background-color: var(--white)
     border: 1px solid; 
     color: var(--white);
     border-radius: 50%;
@@ -59,7 +59,6 @@ nav {
 
 h1 { 
     font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;    
 }
