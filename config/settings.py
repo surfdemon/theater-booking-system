@@ -90,6 +90,8 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+X_FRAME_OPTIONS = 'ALLOWALL'
+
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 MESSAGES_TAGS = {
