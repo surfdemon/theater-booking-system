@@ -12,7 +12,7 @@
                             <a href="{% url 'book_event' event.id %}">
                               <div class="card-body">
                                 <h2 class="card-title">{{ event.name }}</h2>
-                                <p class="card-text">When: {{ event.datetime }}</p>
+                                <p class="card-text">{{ event.datetime }}</p>
                                     <p class="card-text">Tickets Available - {{ event.tickets_left }}</p>
                                     <p class="card-text">£{{ event.price }}</p>
                                 </div>
@@ -49,5 +49,3 @@
 {% block extras %}
     <link rel="stylesheet" href="{% static 'event/css/events.css' %}">
 {% endblock %}
-
-/* src="{% if 'placeholder' in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}" */
