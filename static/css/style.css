@@ -57,6 +57,22 @@ nav {
     color: var(--green) !important;
 }
 
+.active { 
+    color: white; 
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-weight: 500;
+}
+
+#logout-btn { 
+    display: inline-block; 
+    padding: 8px;
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
 h1 { 
     font-family: "Playfair Display", serif;
     font-weight: 300;
