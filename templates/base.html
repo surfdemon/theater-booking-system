@@ -38,7 +38,7 @@
     </head>
 
     <body
-        class="">
+        class="d-flex flex-column h-100">
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -81,9 +81,9 @@
 
                 </div>
             </div>
-        </nav>
+        </nav> 
 
-        <main class="">
+        <main class="flex-grow-1 align-content-center">
             {% if messages %}
                 {% for message in messages %}
                     <div class="alert alert-{{ message.tags }}" id="message-{{ forloop.counter }}">
