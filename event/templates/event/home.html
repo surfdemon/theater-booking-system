@@ -40,10 +40,31 @@
     
     </section>
 
-    <section>
+    
+    <div class="home-div-two">
+        <div class="home-heading-two">Don't miss out</div>
+        <p class="text-center home-text">Reserve your spot at The Miner's Lantern and be part of our living heritage</p>
+        {% if not user.is_authenticated %}
+        <div class="home-subheading text-center"><mark class="text-center hvr-sweep-to-left"><a class="signup-btn" href="{% url 'account_signup' %}">Sign up to Book Now</a></mark></div>
+        {% else %}
+        <div class="home-subheading text-center"><mark class="text-center hvr-sweep-to-left"><a class="signup-btn" href="{% url 'events' %}">Book Now</a></mark></div>
+        {% endif %}
+    </div>
+
+    <section class="parallax-three">
+
+        <div class="parallax-inner-three">
+            
+            <div class="home-subheading-three m-3"><mark>Support Local Music</mark></div>
+            
+        </div>
+        
+    </section>
+    <section class="carousel-section"> 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 pt-5">
+                <div class="col-12 pt-5 pb-5">
+                    <div class="carousel-header">Upcoming Events</div>
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             {% for event in events %}
@@ -78,26 +99,6 @@
                 </div>
             </div>
         </div>
-    </section>
-      
-    <div class="home-div-two">
-    <div class="home-heading-two">Don't miss out</div>
-    <p class="text-center home-text">Reserve your spot at The Miner's Lantern and be part of our living heritage</p>
-    {% if not user.is_authenticated %}
-    <div class="home-subheading text-center"><mark class="text-center hvr-sweep-to-left"><a class="signup-btn" href="{% url 'account_signup' %}">Sign up to Book Now</a></mark></div>
-    {% else %}
-    <div class="home-subheading text-center"><mark class="text-center hvr-sweep-to-left"><a class="signup-btn" href="{% url 'events' %}">Book Now</a></mark></div>
-    {% endif %}
-    </div>
-
-    <section class="parallax-three">
-
-        <div class="parallax-inner-three">
-    
-            <div class="home-subheading-three m-3"><mark>Support Local Music</mark></div>
-    
-        </div>
-    
     </section>
 {% endblock %}
 
