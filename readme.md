@@ -219,7 +219,27 @@ This validated that the contrast was good enough to ensure readability and that 
 
 </details>
 
+# Technologies/Languages/Frameworks Used 
+
+
+<img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/><img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><img src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white"/><img src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/><img src="https://img.shields.io/badge/django%20-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white"/><img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/><img src="https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white"/><img src="https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white"/><img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+
+### Other:
+**PostgreSQL** - Database management system<br>
+**Cloudinary** - Cloud-based image storage<br>
+**Whitenoise** - For serving static files directly from Django<br>
+**Django Crispy Forms** - Form rendering<br>
+**GitHub Projects** - Project management and tracking<br>
+**Balsamiq** - Wireframes and design prototypes<br>
+
 # Testing and validation
+
+# Lighthouse results
+
+Gernal scoring across pages was good, some room for improvment on preformance due to large images.
+
+image
+image
 
 # Manual Testing
 
@@ -299,7 +319,6 @@ This validated that the contrast was good enough to ensure readability and that 
 
 # Deployment
 The application was deployed to Heroku using Gunicorn. A Procfile was created containing the instructions to run the server. A file called requirements.txt  was also used to install all the dependancies needed to run the app. An external database was used instead of the built in heroku one.
-
  
 
 The live site is available [here](https://miners-lantern-b436a12bd6f4.herokuapp.com/).
@@ -372,3 +391,4 @@ The Miner's Lantern booking system project was a successful demonstration of wha
 
 - Established solid foundation for adding more features
 - Opportunity to add more advanced booking features
+- We are aware the Parallax scrolling on the home page does not work with IOS, this is something we would look to update with the next realese.
