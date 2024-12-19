@@ -98,3 +98,22 @@ a:has(.page-next) , a:has(.page-previous) {
 #id_numberOfTickets { 
     width: 50px;
 }
+
+.about-card {
+    margin: 10px;
+    padding: 10px;
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+
+    .about-card {
+        height: auto;
+    }
+    
+}
