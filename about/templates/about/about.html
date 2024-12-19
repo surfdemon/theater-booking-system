@@ -36,11 +36,14 @@
         <div class="container-md form">
             <form method="POST">
                 {% csrf_token %}
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
+                {% if error %}
+                    <p"color: #0e4e19;>{{ error }}</p>
+                {% endif %}
+                <label for="fname">Name:</label>
+                <input type="text" name="fname" id="fname" required>
                 <br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" required>
+                <input type="email" name="email" id="email" required>
                 <br>
                 <button class="nl_button" type="submit">Sign me up</button>
             </form>

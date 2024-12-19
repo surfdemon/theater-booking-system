@@ -282,6 +282,8 @@ mark {
     box-sizing: border-box;
 }
 
+/* About */
+
 .about {
     display: flex;
     justify-content: center;
@@ -343,7 +345,7 @@ mark {
     color:#0e4e19;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-style: normal; 
+    font-style: normal;
 }
 
 .form {
@@ -352,6 +354,15 @@ mark {
 
 .signup_button {
     padding-top: 20px;
+}
+
+.ty_card {
+    left: 25%;
+    right: 50%;
+    width: 50%;
+    max-width: 600px;
+    background-color: #0e4e19;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .errorlist {
