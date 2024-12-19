@@ -5,6 +5,9 @@ from .models import Event, BookingTable
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
+    """
+    Admin view for the Event model.
+    """
     list_display = ['name', 'datetime', 'available_tickets', 'price']
     search_fields = ['name', 'datetime']
     list_filter = ['datetime']
@@ -14,6 +17,9 @@ class EventAdmin(admin.ModelAdmin):
 
 @admin.register(BookingTable)
 class EventBookingTable(admin.ModelAdmin):
+    """
+    Admin view for the BookingTable model.
+    """
     list_display = ['event', 'user', 'numberOfTickets']
     search_fields = ['event', 'user']
     list_filter = ['event', 'user']

@@ -6,6 +6,9 @@ from django.db.models import Sum
 
 
 class Event(models.Model):
+    """
+    Model representing an event.
+    """
     name = models.CharField(max_length=100)
     description = models.TextField()
     datetime = models.DateTimeField()
@@ -22,13 +25,22 @@ class Event(models.Model):
         return self.available_tickets - booked_tickets
 
     def __str__(self):
+        """
+        String for representing the Event object.
+        """
         return self.name
 
 
 class BookingTable(models.Model):
+    """
+    Model representing a booking for an event.
+    """
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     numberOfTickets = models.PositiveIntegerField()
 
     def __str__(self):
+        """
+        String for representing the BookingTable object.
+        """
         return f'{self.user.username} booking for {self.event.name}'
