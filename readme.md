@@ -1,5 +1,6 @@
 # Booking Management system
 
+![The Miner's Lantern](readmeImages\amireponsive.png) 
 
 ## Overview
 
@@ -181,7 +182,96 @@ The accessibility of the colour scheme was also validated using an online checke
 This validated that the contrast was good enough to ensure readability and that It was compliant with web content accessibility guidelines.
 ![contrast checker](https://github.com/user-attachments/assets/063efa43-8eed-496a-ab6f-c61e68fa1384)
 
+# Features
+
+<details>
+<summary>Home Page</summary>
+
+![Hero Seciton](readmeImages\homepage.png)
+![Book Now button](readmeImages\booknow.png)
+![Up coming events caraosel](readmeImages\upcomingevents.png)
+</details>
+
+<details>
+<summary>Events</summary>
+
+![]()
+![]()
+![]()
+</details>
+
+<details>
+<summary>Bookings</summary>
+![]()
+![]()
+![]()
+</details>
+
+<details>
+<summary>About</summary>
+![]()
+![]()
+![]()
+</details>
+
 # Testing and validation
+
+# Manual Testing
+
+## Account Management Testing
+
+| Feature | Test Case | Steps | Expected Result | Pass/Fail |
+|---------|-----------|-------|-----------------|-----------|
+| Account Creation | Valid Registration | 1. Navigate to register page<br>2. Enter valid details<br>3. Submit form | Account created and confirmation email sent | [Pass] |
+| | Invalid Email | 1. Enter invalid email format<br>2. Submit form | Error message shown | [Pass] |
+| | Duplicate Email | 1. Enter existing email<br>2. Submit form | Error message about existing account | [Pass] |
+| | Password Mismatch | 1. Enter different passwords<br>2. Submit form | Error message about non-matching passwords | [Pass] |
+| Login | Valid Login | 1. Enter correct credentials<br>2. Submit | Successfully logged in and redirected | [Pass] |
+| | Invalid Login | 1. Enter incorrect credentials<br>2. Submit | Error message shown | [Pass] |
+
+## Booking Management Testing
+
+| Feature | Test Case | Steps | Expected Result | Pass/Fail |
+|---------|-----------|-------|-----------------|-----------|
+| Create Booking | Valid Booking | 1. Select event<br>2. Enter valid guest number<br>3. Submit | Booking confirmed message shown | [Pass] |
+| | Exceed Capacity | 1. Select event<br>2. Enter guests > capacity<br>3. Submit | Error message shown | [Pass] |
+| View Bookings | Booking List | 1. Navigate to My Bookings<br>2. Check all bookings visible | All bookings displayed correctly | [Pass] |
+| Edit Booking | Valid Edit | 1. Select booking<br>2. Modify details<br>3. Save | Changes saved and confirmed | [Pass] |
+| Cancel Booking | Cancel Future | 1. Select future booking<br>2. Cancel<br>3. Confirm | Booking cancelled message shown| [Pass] |
+
+## Event Management Testing
+
+| Feature | Test Case | Steps | Expected Result | Pass/Fail |
+|---------|-----------|-------|-----------------|-----------|
+| View Events | Event List | 1. Navigate to events page<br>2. Check display | All events listed | [Pass] |
+| | Event Details | 1. Select event<br>2. View details | All information displayed correctly | [Pass] |
+| Create Event | Valid Creation | 1. Enter all details<br>2. Upload image<br>3. Submit | Event created and visible | [Pass] |
+| | Invalid Creation | 1. Submit without required fields | Error messages shown | [Pass] |
+| Edit Event | Valid Edit | 1. Modify event details<br>2. Save changes | Changes saved and visible | [Pass] |
+
+## Admin Testing
+
+| Feature | Test Case | Steps | Expected Result | Pass/Fail |
+|---------|-----------|-------|-----------------|-----------|
+| Admin Access | Create Admin | 1. Create admin account<br>2. Verify privileges | Admin access granted | [Pass] |
+| | Access Control | 1. Test restricted areas<br>2. Verify permissions | Appropriate access levels | [Pass] |
+| | User Management | 1. View user list<br>2. Modify user details | Changes saved successfully | [Pass] |
+
+## Responsive Design Testing
+
+| Device | Test Case | Steps | Expected Result | Pass/Fail |
+|--------|-----------|-------|-----------------|-----------|
+| Mobile | Layout | 1. Test on 320px+ screens<br>2. Check all features | Proper mobile layout | [Pass] |
+| Tablet | Layout | 1. Test on 768px+ screens<br>2. Check all features | Proper tablet layout | [Pass] |
+| Desktop | Layout | 1. Test on 1024px+ screens<br>2. Check all features | Proper desktop layout | [Pass] |
+
+## Accessibility Testing
+
+| Feature | Test Case | Steps | Expected Result | Pass/Fail |
+|---------|-----------|-------|-----------------|-----------|
+| Visual | Contrast | 1. Check color contrast<br>2. Verify readability | Meets WCAG standards | [Pass] |
+| Forms | Labels | 1. Check all form fields<br>2. Verify aria-labels | All forms properly labeled | [Pass] |
+
 
 # Deployment
 The application was deployed to Heroku using Gunicorn. A Procfile was created containing the instructions to run the server. A file called requirements.txt  was also used to install all the dependancies needed to run the app. An external database was used instead of the built in heroku one.
