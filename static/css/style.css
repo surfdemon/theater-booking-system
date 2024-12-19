@@ -53,6 +53,10 @@ nav {
     width: 55px;
 }
 
+.nav-link:hover {
+    color: var(--green) !important;
+}
+
 h1 { 
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -61,8 +65,8 @@ h1 {
 }
 
 #site-logo { 
-    width: 150px; 
-    height: 150px;
+    width: 120px; 
+    height: auto;
 }
 
 footer {
@@ -307,4 +311,8 @@ mark {
 
 .signup_button {
     padding-top: 20px;
+}
+
+.errorlist {
+    list-style: none;
 }
