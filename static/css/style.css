@@ -312,3 +312,7 @@ mark {
 .signup_button {
     padding-top: 20px;
 }
+
+.errorlist {
+    list-style: none;
+}

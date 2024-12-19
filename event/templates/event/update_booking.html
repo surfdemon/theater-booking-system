@@ -4,7 +4,7 @@
     <div class="d-flex justify-content-center align-items-center">
         <div class="card" style="width: 50%;">
             <h1 class="card-title text-secondary text-center">Update Booking for {{ booking.event.name }}</h1>
-            <form method="post" class="card-text text-secondary text-center">
+            <form method="post" class="card-text text-secondary text-center errorlist">
             {% csrf_token %}
             {{ form.as_p }}
             <div class="text-center">
