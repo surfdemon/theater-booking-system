@@ -9,11 +9,19 @@
                     {% for event in events %}
                     <div class="col-md-4 p-4">
                         <div class="card" style='background-image: url("{% if 'placeholder' in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}");'>
+                            {% if event.tickets_left > 0 %}
                             <a href="{% url 'book_event' event.id %}">
+                            {% else %}
+                            <a href="{% url 'events' %}">
+                            {% endif %}
                               <div class="card-body">
                                 <h2 class="card-title">{{ event.name }}</h2>
                                 <p class="card-text">{{ event.datetime }}</p>
+                                    {% if event.tickets_left > 0 %}
                                     <p class="card-text">Tickets Available - {{ event.tickets_left }}</p>
+                                    {% else %}
+                                    <p class="card-text">Sold Out</p>
+                                    {% endif %}
                                     <p class="card-text">£{{ event.price }}</p>
                                 </div>
                             </a>
