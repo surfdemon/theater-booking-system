@@ -42,7 +42,7 @@ class BookEvent(LoginRequiredMixin, View):
                 numberOfTickets=number_of_tickets
                 )
         booking.save()
-        context = { 
+        context = {
                    'event': event.name,
                    'number_of_tickets': number_of_tickets,
         }
@@ -60,11 +60,10 @@ class user_bookings(LoginRequiredMixin, View):
         user_bookings = BookingTable.objects.filter(user=request.user)
         return render(request, 'event/bookings.html', {'user_bookings': user_bookings})
 
+
 class UpdateBooking(LoginRequiredMixin, View):
     def get(self, request, booking_id):
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
-
-
 
         form = UpdateBookingForm(instance=booking)
         return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
@@ -87,3 +86,4 @@ class DeleteBooking(LoginRequiredMixin, View):
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
         booking.delete()
         return redirect('user_bookings')
+        
