@@ -1,9 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="card" style="width: 50%;">
-            <h1 class="card-title text-secondary text-center">Update Booking for {{ booking.event.name }}</h1>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Update Booking</h1>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row d-flex justify-content-evenly">
+                    <div class="col-md-4 p-4">
+                        <div class="card" style='background-image: url("{% if ' placeholder' in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ booking.event.image.url }}{% endif %}");'>
+                            <div>
+                                <div class="card-body">
+            <h2 class="card-title" >{{ booking.event.name }}</h2>
+            <p class="card-text">{{ booking.event.datetime }}</p>
+                                    <p class="card-text">Tickets Available - {{ booking.event.tickets_left }}</p>
+                                    <p class="card-text">Per Ticket: £<span id="price">{{ booking.event.price }}</span></p>
+                                    <p class="card-text">Total Price: £<span id="totalPrice">0</span></p>
             <form method="post" class="card-text text-secondary text-center errorlist">
             {% csrf_token %}
             {{ form.as_p }}
@@ -13,4 +28,16 @@
             </form>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}
+
+{% block extras %}
+<script src="{% static 'event/js/event.js' %}"></script>
+<link rel="stylesheet" href="{% static 'event/css/events.css' %}">
 {% endblock %}
