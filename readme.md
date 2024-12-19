@@ -190,28 +190,33 @@ This validated that the contrast was good enough to ensure readability and that 
 ![Hero Seciton](readmeImages\homepage.png)
 ![Book Now button](readmeImages\booknow.png)
 ![Up coming events caraosel](readmeImages\upcomingevents.png)
+
 </details>
 
 <details>
 <summary>Events</summary>
 
-![]()
-![]()
-![]()
+![Events Page]()
+![Event Booking]()
+![Booking Confrimation]()
+
 </details>
 
 <details>
 <summary>Bookings</summary>
-![]()
-![]()
-![]()
+
+![Manage Your Bookings]()
+![Updating Your Bookings]()
+![Delete Confrimation]()
+
 </details>
 
 <details>
 <summary>About</summary>
-![]()
-![]()
-![]()
+
+![About Page]()
+![Newsletter confirmation]()
+
 </details>
 
 # Testing and validation
@@ -273,12 +278,30 @@ This validated that the contrast was good enough to ensure readability and that 
 | Forms | Labels | 1. Check all form fields<br>2. Verify aria-labels | All forms properly labeled | [Pass] |
 
 
+# Validation
+
+## HTML
+
+1. First validaiton
+ - Errors shown on the carousel due to blank attibutes for inactive slides. To fix, else statements added for inactive slides.
+
+![HTML Validation]()
+
+## CSS
+
+![CSS Validator]()
+
+## Python
+
+![Python Validation]()
+
 # Deployment
 The application was deployed to Heroku using Gunicorn. A Procfile was created containing the instructions to run the server. A file called requirements.txt  was also used to install all the dependancies needed to run the app. An external database was used instead of the built in heroku one.
 
  
 
 The live site is available [here](https://miners-lantern-b436a12bd6f4.herokuapp.com/).
+
 # Development Team
 
 - **Robert Beach**
@@ -295,6 +318,55 @@ The live site is available [here](https://miners-lantern-b436a12bd6f4.herokuapp.
 
 
 # Reflection on Development process.
-## Succsesses
+
+## Successes
+
+Our team of four achieved several key successes during this project:
+
+### Team Collaboration
+
+- Demonstrated effective communication throughout the development process
+- Organised clear task distribution among team members
+- Maintained regular check-ins to ensure everyone was on track
+- Achieved good balance of skills across the team
+
+### Project Management
+
+- Adhered to our planned timeline
+- Fulfilled all core functionality requirements
+- Successfully implemented all main user stories
+- Maintained manageable scope for our four-day timeframe
+
+### Technical Implementation
+
+- Developed clean, simple codebase that's easy to maintain
+- Achieved successful integration of Django with Bootstrap
+- Completed smooth deployment to Heroku
+- Created responsive design that works well across devices
+
 ## Challenges
+
+- Brief learning curve with Django
+- Quickly overcame through pair programming and knowledge sharing
+- Transformed into a good learning experience for the whole team
+
 ## Final Thoughts
+
+The Miner's Lantern booking system project was a successful demonstration of what can be achieved with clear goals and good teamwork. Key takeaways include:
+
+### Project Approach
+
+- Keeping the scope simple proved the right decision
+- Focus on core functionality yielded positive results
+- Clean, functional design served the purpose well
+
+### Team Dynamics
+
+- Four-person team size worked brilliantly for this project
+- Everyone maintained clear roles and responsibilities
+- Good mixture of skills among team members
+
+### Future Improvements
+
+- Established solid foundation for adding more features
+- Opportunity to add more advanced booking features
