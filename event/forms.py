@@ -5,3 +5,6 @@ class UpdateBookingForm(forms.ModelForm):
     class Meta:
         model = BookingTable
         fields = ['numberOfTickets']
+        labels = {
+            'numberOfTickets': 'Number of tickets',
+        }
