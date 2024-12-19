@@ -94,24 +94,28 @@ footer {
     text-transform: uppercase;
 	text-align: center;
 	font-size: 575%;
-	color: var(--white);
+	color: var(--grey);
     letter-spacing: 3px;
 }
 
 .home-div{
-    padding: 3%;
-	margin: 10% 0;  
+    padding: 5%;
+	margin: 0;  
+    background-color: #fffefe;
+    color: var(--grey)
 }
 
 .home-div-two{
-    padding: 3%;
-	margin: 10% 0;  
+    padding: 5%;
+	margin: 0;
+    background-color: #fffefe;
+    color: var(--grey)
 }
 
 .home-heading-two {
 	text-align: center;
 	font-size: 575%;
-	color: var(--white);
+	color: var(--grey);
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
@@ -235,6 +239,12 @@ mark {
 
 /* carousel */
 
+.carousel-header {
+    text-align: center;
+    color: var(--grey);
+    font-size: 200%;
+    text-transform: uppercase;
+}
 .carousel {
     width: 70%; 
     margin: 0 auto;
@@ -257,7 +267,9 @@ mark {
     background-color: var(--grey);
     
 }
-
+.carousel-section {
+    background-color: #fffefe;
+}
 /* Events */
 
 .event-image {
