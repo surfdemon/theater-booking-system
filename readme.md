@@ -1,6 +1,6 @@
 # Booking Management system
 
-![The Miner's Lantern](readmeImages\amireponsive.png) 
+![amireponsive](https://github.com/user-attachments/assets/2948d27b-2bab-4634-b473-a2dfee4bc8e8)
 
 ## Overview
 
@@ -187,35 +187,35 @@ This validated that the contrast was good enough to ensure readability and that 
 <details>
 <summary>Home Page</summary>
 
-![Hero Seciton](readmeImages\homepage.png)
-![Book Now button](readmeImages\booknow.png)
-![Up coming events caraosel](readmeImages\upcomingevents.png)
+![Hero Seciton](https://github.com/user-attachments/assets/4cd380c9-cbf7-4e1f-a84f-4d476c8bccd9)
+![Book Now button](https://github.com/user-attachments/assets/d5259ff9-a982-4d1f-b02c-64fcc08bcdc0)
+![upcomingevents](https://github.com/user-attachments/assets/b8184bcd-70ed-4775-bae8-26e1d71d3945)
 
 </details>
 
 <details>
 <summary>Events</summary>
-
-![Events Page]()
-![Event Booking]()
-![Booking Confrimation]()
+ 
+![eventspage](https://github.com/user-attachments/assets/74ab4cc9-33ea-4f0b-a4f0-0e5ab5b86b1c)
+![eventbooking](https://github.com/user-attachments/assets/5392cc20-984c-4292-a584-fec4ab1b480e)
+![bookingconfirmation](https://github.com/user-attachments/assets/8dcc946d-268d-4103-8af5-57be192fb01e)
 
 </details>
 
 <details>
 <summary>Bookings</summary>
 
-![Manage Your Bookings]()
-![Updating Your Bookings]()
-![Delete Confrimation]()
+![manageyourbookings](https://github.com/user-attachments/assets/ab183fc5-d78d-4436-8a1b-38e9838d7107)
+![updateyourbooking](https://github.com/user-attachments/assets/6303699c-c7cc-4a16-a8ac-abacf472ca2b)
+![deleteyourbooking](https://github.com/user-attachments/assets/af5613ad-9e6b-426b-b9ed-c8f0a2b6bfee)
 
 </details>
 
 <details>
 <summary>About</summary>
-
-![About Page]()
-![Newsletter confirmation]()
+ 
+![aboutpage](https://github.com/user-attachments/assets/20291078-ca82-4203-893a-ca06f49745c5)
+![newsletterconfrimation](https://github.com/user-attachments/assets/664df1ce-f53c-4af7-ac00-86228f98ab97)
 
 </details>
 
@@ -283,17 +283,19 @@ This validated that the contrast was good enough to ensure readability and that 
 ## HTML
 
 1. First validaiton
- - Errors shown on the carousel due to blank attibutes for inactive slides. To fix, else statements added for inactive slides.
 
-![HTML Validation]()
+![htmlerror](https://github.com/user-attachments/assets/5409d09d-0c14-4e2d-a873-97a21c594309)
+
+ - Errors shown on the carousel due to blank attibutes for inactive slides. To fix, else statements added for inactive slides.
 
 ## CSS
 
-![CSS Validator]()
+![cssvalid](https://github.com/user-attachments/assets/ea2de487-375c-4f91-973a-02c9d105c066)
 
 ## Python
 
-![Python Validation]()
+![pylint](https://github.com/user-attachments/assets/6ad01ed4-549f-4907-9606-492ae426772e)
+
 
 # Deployment
 The application was deployed to Heroku using Gunicorn. A Procfile was created containing the instructions to run the server. A file called requirements.txt  was also used to install all the dependancies needed to run the app. An external database was used instead of the built in heroku one.
