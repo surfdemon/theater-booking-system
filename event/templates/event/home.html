@@ -1,40 +1,103 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block head %}
+{% endblock head %}
+
 {% block content %}
 
     <section class="parallax">
 
     <div class="parallax-inner">
-
-        
-        <div class="home-subheading m-p">Welcome to<br>The Miner's Lantern</div>
+     
+            {% if not user.is_authenticated %}
+                <div class="home-subheading m-3"><mark> Welcome to <br>The Miner's Lantern </mark><br><br><mark class="hvr-sweep-to-left">
+                    <a class="signup-btn" href="{% url 'account_signup' %}">Sign up</a></mark></div>
+            {%else%}
+                <div class="home-subheading m-3"><mark> Welcome back to <br>The Miner's Lantern </mark><br><br><mark class="hvr-sweep-to-left">
+                    <a class="signup-btn" href="{% url 'events' %}">To Events</a></mark></div>
+            {% endif %}
+     
         
 
     </div>
 
     </section>
-    <div class="home-heading">Event Home</div>
+    
+    <div class="home-div">
+    <div class="home-heading">Home Of Events</div>
+    <p class="text-center home-text">The Miner's Lantern isn't just another pub... it's where stories begin and music comes alive. Our historic venue has been hosting unforgettable nights since 1800s, combining the charm of a traditional British pub with a dynamic live music venue. From intimate acoustic sessions to energetic band nights, we're proud to be your local home of live entertainment.</p>
+    </div>
 
     <section class="parallax-two">
 
         <div class="parallax-inner-two">
     
-            <div class="home-subheading-two">Venue</div>
+            <div class="home-subheading-two m-3"><mark>Heritage. Music. Community.</mark></div>
     
         </div>
     
     </section>
 
-    <div class="home-heading">Book Now</div>
+    <section> 
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col text-center"> 
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            {% for event in events %}
+                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="{{ forloop.counter0 }}"
+                                class="{% if forloop.first %}active{% endif %}"
+                                aria-current="{% if forloop.first %}true{% endif %}"
+                                aria-label="Slide {{ forloop.counter }}">
+                            </button>
+                            {% endfor %}
+                         </div>
+                        <div class="carousel-inner">
+                            {% for event in events %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+
+                                <img src="{{ event.image.url }}" class="d-block w-100" alt="{{ event.name }}">
+
+                                <div class="carousel-caption d-md-block">
+                                    <h2>{{ event.name }}</h2>
+                                    <p>{{ event.datetime }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </section>
+      
+    <div class="home-div-two">
+    <div class="home-heading-two">Don't miss out</div>
+    <p class="text-center home-text">Reserve your spot at The Miner's Lantern and be part of our living heritage</p>
+    <div class="home-subheading text-center"><mark class="text-center hvr-sweep-to-left"><a class="signup-btn" href="{% url 'events' %}">Book Now</a></mark></div>
+    </div>
 
     <section class="parallax-three">
 
         <div class="parallax-inner-three">
     
-            <div class="home-subheading-three">Venue</div>
+            <div class="home-subheading-three m-3"><mark>Support Local Music</mark></div>
     
         </div>
     
     </section>
 {% endblock %}
+
+{% block extras %}
+{% endblock extras %}

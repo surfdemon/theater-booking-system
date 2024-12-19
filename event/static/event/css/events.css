@@ -1,0 +1,90 @@
+.card { 
+    background-color: var(--light);
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0;
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+}
+a:has(.card-body){
+    color: var(--green);
+    text-decoration: none;
+    text-align: center;
+}
+.card-body { 
+    background: radial-gradient(
+        circle, 
+        rgba(var(--white-rgba), 1) 0%, 
+        rgba(var(--white-rgba), 0.8) 50%, 
+        rgba(var(--white-rgba), 0) 95%, 
+        rgba(var(--white-rgba), 0) 100%
+    );
+}
+.card-text{
+    color: var(--green);
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;   
+}
+a:has(.page-next) , a:has(.page-previous) {
+    text-decoration: none;
+    color: white;
+}
+.page-previous {
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-weight: 400;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0;
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+}
+.page-previous:hover{ 
+    background-color: var(--green);
+    color: var(--white);
+}
+.page-next {
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-weight: 400;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0;
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    outline: none;
+    text-decoration: none;
+}
+.page-next:hover{ 
+    background-color: var(--green);
+    color: var(--white);
+}
+.page-previous:focus { 
+    outline: none;
+    color: var(--white) !important;
+    box-shadow: none !important;
+}
+.page-next:focus { 
+    outline: none;
+    color: var(--white) !important;
+    box-shadow: none !important;
+}
