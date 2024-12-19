@@ -10,7 +10,11 @@ from django.db.models import Sum
 
 class EventHome(View):
     def get(self, request):
-        return render(request, 'event/home.html')
+        events = Event.objects.all()
+        context = {
+            'events': events
+        }
+        return render(request, 'event/home.html', context)
 
 
 class EventList(generic.ListView):
@@ -59,9 +63,9 @@ class user_bookings(LoginRequiredMixin, View):
 class UpdateBooking(LoginRequiredMixin, View):
     def get(self, request, booking_id):
         booking = get_object_or_404(BookingTable, id=booking_id, user=request.user)
-        
-        
-    
+
+
+
         form = UpdateBookingForm(instance=booking)
         return render(request, 'event/update_booking.html', {'form': form, 'booking': booking})
 

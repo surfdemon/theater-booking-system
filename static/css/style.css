@@ -154,7 +154,7 @@ mark {
     color: var(--white) !important;
 }
 
-/* hover.css */
+/* hover.css start*/
 
 .hvr-sweep-to-left {
     display: inline-block;
@@ -196,6 +196,7 @@ mark {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+/* hover.css end */
 
 /* Start Parallax */
 
@@ -231,6 +232,35 @@ mark {
 
 
 /* End Parallex */
+
+/* carousel */
+
+.carousel-item {
+    max-height: 50vh;
+}
+
+.carousel-item img {
+    width: 80%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.carousel-caption {
+    background-color: var(--grey);
+    
+}
+
+.carousel-indicators {
+    z-index: 2;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
 
 /* Events */
 
@@ -299,7 +329,7 @@ mark {
 
 .signup h5 {
     font-family: "Playfair Display", serif;
-    color:#0e4e19
+    color:#0e4e19;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal; 
