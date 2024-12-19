@@ -241,12 +241,9 @@ mark {
 }
 
 .carousel-item {
-    margin: 10px;
     padding: 10px;
-    text-align: center;
     background-position: center;
     background-size: cover;
-    border-radius: 0;
     max-height: 60vh;
 }
 
@@ -260,18 +257,6 @@ mark {
     background-color: var(--grey);
     
 }
-
-.carousel-indicators {
-    z-index: 2;
-}
-
-.carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 4px;
-}
-
 
 /* Events */
 
@@ -366,4 +351,15 @@ mark {
 
 .errorlist {
     list-style: none;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+
+    .carousel {
+        width: 100%; 
+        margin: 0 auto;
+    }
+
 }
