@@ -45,7 +45,7 @@ nav {
 }
 
 .navbar-light .navbar-toggler{ 
-    background-color: var(--white)
+    background-color: var(--white);
     border: 1px solid; 
     color: var(--white);
     border-radius: 50%;
@@ -339,7 +339,6 @@ mark {
 .signup h5 {
     font-family: "Playfair Display", serif;
     color:#0e4e19;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
 }
