@@ -40,10 +40,10 @@
     
     </section>
 
-    <section> 
+    <section>
         <div class="container-fluid">
-            <div class="row mt-4">
-                <div class="col text-center"> 
+            <div class="row">
+                <div class="col-12 pt-5">
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             {% for event in events %}
@@ -54,13 +54,11 @@
                                 aria-label="Slide {{ forloop.counter }}">
                             </button>
                             {% endfor %}
-                         </div>
+                        </div>
                         <div class="carousel-inner">
                             {% for event in events %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}">
-
                                 <img src="{{ event.image.url }}" class="d-block w-100" alt="{{ event.name }}">
-
                                 <div class="carousel-caption d-md-block">
                                     <h2>{{ event.name }}</h2>
                                     <p>{{ event.datetime }}</p>
@@ -68,7 +66,6 @@
                             </div>
                             {% endfor %}
                         </div>
-                        <div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
@@ -78,6 +75,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
+                </div>
             </div>
         </div>
     </section>
@@ -85,7 +83,11 @@
     <div class="home-div-two">
     <div class="home-heading-two">Don't miss out</div>
     <p class="text-center home-text">Reserve your spot at The Miner's Lantern and be part of our living heritage</p>
+    {% if not user.is_authenticated %}
+    <div class="home-subheading text-center"><mark class="text-center hvr-sweep-to-left"><a class="signup-btn" href="{% url 'account_signup' %}">Sign up to Book Now</a></mark></div>
+    {% else %}
     <div class="home-subheading text-center"><mark class="text-center hvr-sweep-to-left"><a class="signup-btn" href="{% url 'events' %}">Book Now</a></mark></div>
+    {% endif %}
     </div>
 
     <section class="parallax-three">
