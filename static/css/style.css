@@ -57,6 +57,13 @@ nav {
     color: var(--green) !important;
 }
 
+.active { 
+    color: white; 
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-weight: 500;
+}
+
 h1 { 
     font-family: "Playfair Display", serif;
     font-weight: 300;
