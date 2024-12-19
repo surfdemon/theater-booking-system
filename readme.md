@@ -238,8 +238,8 @@ This validated that the contrast was good enough to ensure readability and that 
 
 Gernal scoring across pages was good, some room for improvment on preformance due to large images.
 
-image
-image
+![lighthouse](https://github.com/user-attachments/assets/fdd7260c-4701-4fee-87cd-61a6023e441e)
+![lighthousemobile](https://github.com/user-attachments/assets/ec3bbd81-c5e0-491f-b34e-5a1fd328f72a)
 
 # Manual Testing
 
