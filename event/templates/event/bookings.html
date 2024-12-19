@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
     <h1>Bookings</h1>
     <p>Manage your bookings.</p>
@@ -35,4 +35,8 @@
     {% else %}
         <p>You have no bookings.</p>
     {% endif %}
+{% endblock %}
+
+{% block extras %}
+    <link rel="stylesheet" href="{% static 'event/css/events.css' %}">
 {% endblock %}
