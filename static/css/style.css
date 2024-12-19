@@ -357,8 +357,7 @@ mark {
 }
 
 .ty_card {
-    left: 25%;
-    right: 50%;
+    margin: 0 auto;
     width: 50%;
     max-width: 600px;
     background-color: #0e4e19;

@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% url 'event_home' as event_home %}
 {% load static %}
 
 {% block head %}{% endblock %}
 
 {% block content %}
-<div class="card text-center ty_card">
+<div class="card ty_card" style="margin: 0 auto;">
     <div class="card-header">
             <h1>Newsletter Sign Up Successful</h1>
     </div>
@@ -14,7 +15,7 @@
                 just great artists, music and events!
                 <br> 
                 We can't wait to see you soon</p>
-        <a class="btn nl_button" href="event/templates/event/home.html" role="button">Home</a>
+        <a class="btn nl_button" href="{% url 'event_home' %}" role="button">Home</a>
     </div>
 </div>
 {% endblock %}
