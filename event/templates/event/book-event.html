@@ -24,11 +24,12 @@
                 <br>
                 <button type="submit" class="btn btn-secondary">Book Tickets</button>
             </form>
+            <p class="text-center text-secondary">The price is £{{ event.price }} per ticket</p>
+            <p class="text-center text-secondary">Total Price: £<span id="totalPrice">0</span></p>
         </div>
     </div>
 
-    <p>The price is £{{ event.price }} per ticket</p>
-    <p>Total Price: £<span id="totalPrice">0</span></p>
+
 
 {% endblock %}
 
