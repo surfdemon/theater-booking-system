@@ -95,9 +95,6 @@ a:has(.page-next) , a:has(.page-previous) {
     display: flex; 
     justify-content: space-evenly;
 }
-.update-booking-link { 
-
-}
-.delete-booking-button { 
-
+#id_numberOfTickets { 
+    width: 50px;
 }
