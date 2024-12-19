@@ -2,37 +2,48 @@
 {% load static %}
 
 {% block head %}
-    <title>Book Event</title>
+<title>Book Event</title>
 {% endblock %}
 
 {% block content %}
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="card" style="width: 50%;">
-            <h1 class="card-title text-secondary text-center">Book Event Page</h1>
-            <p class="card-text text-secondary text-center">Please make your booking for {{ event.name }}</p>
-            <form method="POST" class="card-text text-secondary text-center">
-                {% csrf_token %}
-                <label for="tickets">Number of tickets</label>
-                <input 
-                    type="number" 
-                    name="number_of_tickets" 
-                    id="number_of_tickets" 
-                    min="1" 
-                    max="{{ event.tickets_left }}" 
-                    onChange="calculateTotalPrice({{ event.price }})"
-                >
-                <br>
-                <button type="submit" class="btn btn-secondary">Book Tickets</button>
-            </form>
-            <p class="text-center text-secondary">The price is £{{ event.price }} per ticket</p>
-            <p class="text-center text-secondary">Total Price: £<span id="totalPrice">0</span></p>
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row d-flex justify-content-evenly">
+                    <div class="col-md-4 p-4">
+                        <div class="card" style='background-image: url("{% if ' placeholder' in event.image.url %}{% static 'event/img/the-miners-lantern-logo.png' %}{% else %}{{ event.image.url }}{% endif %}");'>
+                            <div>
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ event.name }}</h2>
+                                    <p class="card-text">{{ event.datetime }}</p>
+                                    <p class="card-text">Tickets Available - {{ event.tickets_left }}</p>
+                                    <p class="card-text">Per Ticket: £<span id="price">{{ event.price }}</span></p>
+                                    <p class="card-text">Total Price: £<span id="totalPrice">0</span></p>
+                                    <form method="POST" class="card-text text-secondary text-center">
+                                        {% csrf_token %}
+                                        <label for="tickets">Number of tickets</label>
+                                        <input type="number" name="number_of_tickets" id="number_of_tickets" min="1"
+                                            max="{{ event.tickets_left }}"
+                                            onChange="calculateTotalPrice({{ event.price }})">
+                                        <br>
+                                        <button type="submit" class="btn btn-secondary">Book Tickets</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
+</section>
 
 
 {% endblock %}
 
 {% block extras %}
-    <script src="{% static 'event/js/event.js' %}"></script>
+<script src="{% static 'event/js/event.js' %}"></script>
+<link rel="stylesheet" href="{% static 'event/css/events.css' %}">
 {% endblock %}
