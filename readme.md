@@ -338,6 +338,23 @@ The live site is available [here](https://miners-lantern-b436a12bd6f4.herokuapp.
 [GitHub](https://github.com/Richard-Hallam)
 
 
+## Attributions
+
+- AI used to assist with text for content generation, bug fixes, coding assitance and user stories. [Chat GPT](https://chatgpt.com/) & [Claude](https://claude.ai/)
+
+- Font awesome used for any icons present and fonts used from google fonts
+
+- Images used from [Pexels](https://www.pexels.com/)
+
+- [Canva](https://www.canva.com/en_gb/) used for logo  design.
+
+- [Lucidchart](https://www.lucidchart.com/pages/database-diagram/database-schema) used for Database Schema.
+
+- [Stackoverflow](https://stackoverflow.co/), [W3Schools](https://www.w3schools.com/) and relevent technlogoy documentation used for bug and issue look ups.
+
+- Githut copilot used for assistance.
+
+
 # Reflection on Development process.
 
 ## Successes
