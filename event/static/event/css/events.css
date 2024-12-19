@@ -13,6 +13,9 @@
     justify-content: center;
     height: 700px;
 }
+.card-title{
+    color: var(--green);
+}
 a:has(.card-body){
     color: var(--green);
     text-decoration: none;
@@ -87,4 +90,14 @@ a:has(.page-next) , a:has(.page-previous) {
     outline: none;
     color: var(--white) !important;
     box-shadow: none !important;
+}
+.booking-update-area { 
+    display: flex; 
+    justify-content: space-evenly;
+}
+.update-booking-link { 
+
+}
+.delete-booking-button { 
+
 }
