@@ -98,7 +98,27 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <br>
+            
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-between p-4">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <h5 class="m-4">
+                            Opening Times:
+                        </h5>
+                        <ul class="m-2">
+                            <li>Monday - Thursday: 12:00 PM - 11:00 PM</li>
+                            <li>Friday - Saturday: 12:00 PM - 1:00 AM</li>
+                            <li>Sunday: 12:00 PM - 10:30 PM</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 align-self-center text-center">
+                        <p class="m-4">
+                            {% block copyright %}
+                                Copyright The Miner's Lantern 2024
+                            {% endblock copyright %}
+                        </p>
+                    </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 d-flex flex-column justify-content-center">
             <p class="m-4 text-center">
                 <a class="social-link" target="_blank" href="https://www.facebook.com/">
                     <i class="fab fa-brand fa-facebook-f mx-4"></i>
@@ -121,25 +141,7 @@
                     <span class="sr-only">Instagram</span>
                 </a>
             </p>
-            <div class="container-fluid">
-                <div class="row d-flex justify-content-between p-4">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h5 class="m-4">
-                            Opening Times:
-                        </h5>
-                        <ul class="m-2">
-                            <li>Monday - Thursday: 12:00 PM - 11:00 PM</li>
-                            <li>Friday - Saturday: 12:00 PM - 1:00 AM</li>
-                            <li>Sunday: 12:00 PM - 10:30 PM</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 align-self-center text-center">
-                        <p class="m-4">
-                            {% block copyright %}
-                                Copyright The Miner's Lantern 2024
-                            {% endblock copyright %}
-                        </p>
-                    </div>
+            </div>
                 </div>
             </div>
         </footer>
